@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayor en Arreglo</title>
+</head>
+<body>   
+    <div>
+        <section>
+            <article>
+                <hr>
+                <script type="text/javascript">
+                    var lista=new Array(10);
+                    rellenar(lista);
+                    document.write(lista);
+                    posicion(lista);
+                    function posicion(listas){
+                    var mayor=0;
+                    for (let x = 1; x < listas.length; x++) {
+                        if (listas[x] > listas[x-1]) {
+                            mayor = x;
+                        }
+                    }
+                    document.write(" El numero mayor del arreglo es: "+(mayor));
+                    }
+                    function rellenar(matriz)
+                    {
+                        var largo, valor, ind;
+                        largo = matriz.length;
+                        for(ind = 0; ind < largo; ind++)
+                            {
+                                valor = Math.random()*20;
+                                matriz[ind] = Math.round(valor);
+                            }
+                    }
+                </script>
+            </article>
+        </section>
+        </div>
+</body>
+</html>
